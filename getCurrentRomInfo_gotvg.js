@@ -12,3 +12,9 @@ var funBurnGetDrvSelect = new NativeFunction(ptrBurnGetDrvSelect, 'int', [])
 var drvSelect = funBurnGetDrvSelect()
 console.log('drvSelect ' + drvSelect)
 
+// 4FB908 pdriver
+var pDriver= (0x4FB908+drvSelect*4)
+console.log('pDriver '  + ptr(pDriver));
+
+showDrvInfoByCallBurnFuns();
+
